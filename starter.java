@@ -14,11 +14,8 @@ public class starter implements InputControl, InputKeyControl {
 		KeyController kC = new KeyController(Canvas.getInstance(),new starter());
 		MouseController mC = new MouseController(Canvas.getInstance(),new starter());
 		g = new gui();
-		g.startscreen(ss);
-		// while(!ba){
-			// if(ss.equals("a")||ss.equals("b")||ss.equals("c")){g.startscreen(ss);break;}
-		// }
-		while(true){if(ss.equals("b")){System.out.print(ss);break;}}
+		g.startscreen();
+		
 	}
 
 	public void onMouseClick(double x, double y) {
@@ -28,7 +25,23 @@ public class starter implements InputControl, InputKeyControl {
 
 	public void keyPress(String s) {
 		// enter code here
-		ss = s;
+		if(ba == false&&(s.equals("a")||s.equals("b")||s.equals("c"))) {
+			g.gameload(s);
+			ba = true;
+			ss = s;
+			s = new String("aws");
+		}
+		if(ba == true&&(!s.equals("aws"))) {
+			switch(ss) {
+				case "a":
+				break;
+				case "b":
+				break;
+				case "c":
+				break;
+			}
+		}
+		
 		//System.out.print(ss);
 	}
 }
