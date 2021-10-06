@@ -8,8 +8,9 @@ public class gui {
 	private Color ca,cb,cc;
 	public void gui(int flag) {
 		switch(flag){
-			case 0:
-				
+			case 99:
+			break;
+			default:
 			break;
 		}
 	}
@@ -63,6 +64,16 @@ public class gui {
 				break;
 		}
 	}
-	
+	public void wagerscreen() {
+		ra = new Rectangle(0,0,1000,1000);
+		ca = new Color(210,210,210);
+		ra.setColor(ca);
+		ra.fill();
+		ta = new Text(300,180,"How much will you wager?");
+		tb = new Text(250,280,"Enter in console");
+		ta.grow(280,80);
+		ta.draw();
+		tb.draw();
+	}
 	
 }

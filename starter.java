@@ -1,10 +1,12 @@
 import pkg.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class starter implements InputControl, InputKeyControl {
-	static double bal=100;
+	static int bal=100;
 	static int flag=0;
 	static boolean ba=false;
+	static boolean bb=false;
 	static EasyReader e=new EasyReader();
 	static gui g;
 	static Text t;
@@ -31,17 +33,35 @@ public class starter implements InputControl, InputKeyControl {
 			ss = s;
 			s = new String("aws");
 		}
-		if(ba == true&&(!s.equals("aws"))) {
+		if(!bb&&(!s.equals("aws"))) {
+			boolean boole = false;
+			Scanner sc = new Scanner(System.in);
 			switch(ss) {
 				case "a":
+					g.wagerscreen();bb=true;s=new String("bad");
+					while((!boole)){
+						System.out.println("Wager amount(you have "+bal+" tokens)");
+						int ia = sc.nextInt();
+						sc.nextLine();
+						if(ia>bal||ia<0) {
+							System.out.println("That's not within your budget!");
+						}
+						else if(ia<=bal){
+							bal -= ia;
+							boole=true;
+						}
+					}
 				break;
 				case "b":
+					g.wagerscreen();bb=true;s=new String("bad");
 				break;
 				case "c":
+					g.wagerscreen();bb=true;s=new String("bad");
 				break;
 			}
 		}
-		
-		//System.out.print(ss);
+		if(bb == true&&(!s.equals("bad"))) {
+			System.out.print("good");
+		}
 	}
 }

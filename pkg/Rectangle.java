@@ -37,6 +37,14 @@ public class Rectangle implements Shape
         this.width = width;
         this.height = height;
     }
+	
+	/**
+       isFilled returns whether or not rectangle has been filled
+    */
+	public boolean isFilled()
+	{
+		return filled;
+	}
 
     /**
        Gets the leftmost x-position of this rectangle.
