@@ -7,6 +7,7 @@ public class starter implements InputControl, InputKeyControl {
 	static int flag=0;
 	static boolean ba=false;
 	static boolean bb=false;
+	static boolean bc=false;
 	static EasyReader e=new EasyReader();
 	static gui g;
 	static Text t;
@@ -38,7 +39,7 @@ public class starter implements InputControl, InputKeyControl {
 			Scanner sc = new Scanner(System.in);
 			switch(ss) {
 				case "a":
-					g.wagerscreen();bb=true;s=new String("bad");
+					bb=true;s=new String("bad");
 					while((!boole)){
 						System.out.println("Wager amount(you have "+bal+" tokens)");
 						int ia = sc.nextInt();
@@ -51,17 +52,30 @@ public class starter implements InputControl, InputKeyControl {
 							boole=true;
 						}
 					}
+					flag = 1;
 				break;
 				case "b":
-					g.wagerscreen();bb=true;s=new String("bad");
+					bb=true;s=new String("bad");
+					flag = 3;
 				break;
 				case "c":
-					g.wagerscreen();bb=true;s=new String("bad");
+					bb=true;s=new String("bad");
+					flag = 5;
 				break;
 			}
 		}
 		if(bb == true&&(!s.equals("bad"))) {
-			System.out.print("good");
+			switch(flag) {
+				case 1:
+				flag++;
+				break;
+				case 3:
+				flag++;
+				break;
+				case 5:
+				flag++;
+				break;
+			}
 		}
 	}
 }

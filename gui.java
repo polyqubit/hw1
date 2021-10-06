@@ -35,7 +35,7 @@ public class gui {
 					ra.setColor(ca);
 					ra.fill();
 					ta = new Text(300,180,"SLOTS!");
-					tb = new Text(250,280,"Press any key to play!");
+					tb = new Text(250,280,"Press any key, then wager in console!");
 					ta.grow(200,100);
 					ta.draw();
 					tb.draw();
@@ -64,16 +64,18 @@ public class gui {
 				break;
 		}
 	}
-	public void wagerscreen() {
+	public void slotsscreen() {
 		ra = new Rectangle(0,0,1000,1000);
-		ca = new Color(210,210,210);
+		rb = new Rectangle(160,110,50,50);
+		cb = new Color(200,200,80);
+		ca = new Color(250,190,250);
 		ra.setColor(ca);
+		rb.setColor(cb);
 		ra.fill();
-		ta = new Text(300,180,"How much will you wager?");
-		tb = new Text(250,280,"Enter in console");
+		rb.fill();
+		ta = new Text(280,80,"Click to stop the slots!");
 		ta.grow(280,80);
 		ta.draw();
-		tb.draw();
 	}
 	
 }
