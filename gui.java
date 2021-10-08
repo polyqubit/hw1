@@ -1,7 +1,7 @@
 import pkg.*;
 import java.util.ArrayList;
 
-public class gui {
+public class gui extends Thread {
 	private Text ta,tb,tc,td,te,tf,tg,th,ti,tj;
 	private Rectangle ra,rb,rc,rd,re,rf,rg,rh,ri;
 	private Ellipse ea,eb;
@@ -130,33 +130,43 @@ public class gui {
 		switch(randInp) {
 			case 0: case 10:
 				ta.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 			case 1:
 				tb.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 			case 2:
 				tc.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 			case 3:
 				td.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 			case 4:
 				te.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 			case 5:
 				tf.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 			case 6:
 				tg.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 			case 7:
 				th.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 			case 8:
 				ti.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 			case 9:
 				tj.setPosition(x,250);
+				rb.setPosition(x-50,210);
 			break;
 		}
 		

@@ -93,6 +93,13 @@ public class Rectangle implements Shape
         y += dy;
         Canvas.getInstance().repaint();
     }
+	
+	public void setPosition(double dx, double dy)
+    {
+        x = dx;
+        y = dy;
+        Canvas.getInstance().repaint();
+    }
 
     /**
        Resizes this rectangle both horizontally and vertically.

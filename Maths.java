@@ -110,7 +110,8 @@ public final class Maths {
 			else {tiom = tiom%(limit);}
 		}
 		int toim = (int) tiom;
-		return list[toim];
+		if(list[toim]==10){return 0;}
+		else{return list[toim];}
 	}
 }
 
