@@ -74,7 +74,7 @@ public class starter implements InputControl, InputKeyControl {
 				uiuo++;
 			}
 			
-			if((uiuo>7)&&(flag<10)&&(flag!=0)) {
+			if((uiuo>6)&&(flag<10)&&(flag!=0)) {
 				if((slotAR==slotBR)&&(slotAR==slotCR)&&(slotAR==7)) {
 					System.out.println("actual gamer gamer\n");
 					bal += ia * 25;
